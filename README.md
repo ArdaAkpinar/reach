@@ -167,51 +167,9 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Reach Qura W Pyth", "Synapse")
 
     -- MAIN
-    local Main = Window:NewTab("Reach Pc")
-    local MainSection = Main:NewSection("Reach Pc")
+    local Main1 = Window:NewTab("Reach Pc and Mobile")
+    local Main1Section = Main1:NewSection("Reach Pc and Mobile")
 
-local RunStepped
-
-MainSection:NewToggle("Reach", "Enables Reach", function(s)
-if s then
-RunStepped = game:GetService("RunService").RenderStepped:Connect(function()
-if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
-if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - game.Workspace.TPSSystem.TPS.Position).Magnitude >= DistanceReach then
-if game.Lighting[game.Players.LocalPlayer.Name].PreferredFoot.Value == 1 then
-firetouchinterest(game.Players.LocalPlayer.Character["Right Leg"], game.Workspace.TPSSystem.TPS, 0)
-			firetouchinterest(game.Players.LocalPlayer.Character["Right Leg"], game.Workspace.TPSSystem.TPS, 1)
-elseif game.Lighting[game.Players.LocalPlayer.Name].PreferredFoot.Value == 2 then
-firetouchinterest(game.Players.LocalPlayer.Character["Left Leg"], game.Workspace.TPSSystem.TPS, 0)
-			firetouchinterest(game.Players.LocalPlayer.Character["Left Leg"], game.Workspace.TPSSystem.TPS, 1)
-
-end
-end
-end
-if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
-if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - game.Workspace.TPSSystem.TPS.Position).Magnitude >= DistanceReach then
-if game.Lighting[game.Players.LocalPlayer.Name].PreferredFoot.Value == 1 then
-firetouchinterest(game.Players.LocalPlayer.Character["RightLowerLeg"], game.Workspace.TPSSystem.TPS, 0)
-			firetouchinterest(game.Players.LocalPlayer.Character["RightLowerLeg"], game.Workspace.TPSSystem.TPS, 1)
-elseif game.Lighting[game.Players.LocalPlayer.Name].PreferredFoot.Value == 2 then
-firetouchinterest(game.Players.LocalPlayer.Character["LeftLowerLeg"], game.Workspace.TPSSystem.TPS, 0)
-			firetouchinterest(game.Players.LocalPlayer.Character["LeftLowerLeg"], game.Workspace.TPSSystem.TPS, 1)
-			end
-			end
-			end
-end)
-else
-RunStepped:Disconnect()
-end
-end)
-
-MainSection:NewSlider("SliderText", "SliderInfo", 100, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    DistanceReach = s
-end)
-
-local Main1 = Window:NewTab("Reach Mobile")
-    local Main1Section = Main1:NewSection("Reach Mobile")
-
-Main1Section:NewLabel("Reach Mobile")
 local RunSteppedMobile
 local DistanceReachMobile = 0
 
