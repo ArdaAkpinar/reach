@@ -167,7 +167,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Reach Qura W Pyth", "Synapse")
 
     -- MAIN
-    local Main1 = Window:NewTab("Reach Pc and Mobile")
+    local Main1 = Window:NewTab("Reach Pc and Mobile (by Qura)")
     local Main1Section = Main1:NewSection("Reach Pc and Mobile")
 
 local RunSteppedMobile
